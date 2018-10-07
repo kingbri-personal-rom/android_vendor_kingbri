@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
     GahsThemePickerStub \
     FontArbutusSourceOverlay \
     FontLatoZillaOverlay \
-    FontRubikRubikOverlay
+    FontRubikRubikOverlay \
+    Lawnchair
 
 # For bootanimation
 PRODUCT_COPY_FILES += \
@@ -39,3 +40,8 @@ PRODUCT_COPY_FILES += \
 # World APN list
 PRODUCT_PACKAGES += \
     apns-conf.xml
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/kingbri/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/kingbri/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml

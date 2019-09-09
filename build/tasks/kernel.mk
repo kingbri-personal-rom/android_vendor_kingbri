@@ -262,13 +262,6 @@ ifneq ($(filter-out false,$(USE_CCACHE)),)
     # Detect if the system already has ccache installed.
     ccache := $(shell which ccache)
 
-    # Use the prebuilt one if host doesn't have ccache installed.
-    ifeq ($(ccache),)
-        ccache := $(BUILD_TOP)/prebuilts/misc/$(HOST_PREBUILT_TAG)/ccache/ccache
-        # Check that the executable is here.
-        ccache := $(strip $(wildcard $(ccache)))
-    endif
-
     # Print which ccache is going to be used to build the Kernel.
     $(info Using '$(ccache)' binary)
 else
@@ -279,7 +272,11 @@ endif
 ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
     KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(KERNEL_TOOLCHAIN_PATH)"
     ifeq ($(KERNEL_CC),)
-        KERNEL_CC := CC="$(ccache) $(TARGET_KERNEL_CLANG_PATH)/clang"
+        ifneq ($(USE_CCACHE),)
+            KERNEL_CC := CC="$(CCACHE_EXEC) clang"
+        else
+            KERNEL_CC := CC="clang"
+        endif
     endif
 else
     KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(ccache) $(KERNEL_TOOLCHAIN_PATH)"

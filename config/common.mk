@@ -29,4 +29,8 @@ PRODUCT_COPY_FILES += \
     
 # Copy Privapp-permissions!
 PRODUCT_COPY_FILES += \
-    vendor/lineage/config/permissions/privapp-permissions-kingbri.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-kingbri.xml \
+    vendor/lineage/config/permissions/privapp-permissions-kingbri.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-kingbri.xml
+
+# RRO Overlays 
+PRODUCT_PACKAGES += \
+    NexusLauncherReleaseOverlay

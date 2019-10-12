@@ -34,3 +34,7 @@ PRODUCT_COPY_FILES += \
 # RRO Overlays 
 PRODUCT_PACKAGES += \
     NexusLauncherReleaseOverlay
+    
+# Extra Packages
+PRODUCT_PACKAGES += \
+    PixelThemes

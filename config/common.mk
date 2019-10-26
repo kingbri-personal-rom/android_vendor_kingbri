@@ -13,6 +13,7 @@
 # limitations under the License.
 
 include vendor/gahs/config/fonts.mk
+include vendor/gahs/config/google_audio.mk
 
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/gahs/overlay/common

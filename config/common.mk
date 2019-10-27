@@ -14,6 +14,7 @@
 
 include vendor/gahs/config/fonts.mk
 include vendor/gahs/config/google_audio.mk
+include frameworks/base/data/sounds/AudioPackage14.mk
 
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/gahs/overlay/common

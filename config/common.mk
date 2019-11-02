@@ -22,3 +22,7 @@ endif
 
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/kingbri/overlay/common
+
+# For bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/kingbri/prebuilt/common/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip

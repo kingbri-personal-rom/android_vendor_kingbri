@@ -26,3 +26,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 # For bootanimation
 PRODUCT_COPY_FILES += \
     vendor/kingbri/prebuilt/common/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+    
+# Copy Privapp-permissions!
+PRODUCT_COPY_FILES += \
+    vendor/lineage/config/permissions/privapp-permissions-kingbri.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-kingbri.xml \

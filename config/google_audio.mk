@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PREBUILT_AUDIO_PATH := vendor/gahs/prebuilt/common/media/audio
+PREBUILT_AUDIO_PATH := vendor/kingbri/prebuilt/common/media/audio
 
 ALARM_FILES := Icicles Full_of_wonder Rise Jump_start Flow Rolling_fog Drip A_real_hoot \
 	Early_twilight Spokes Gallop Sway Wag Loose_change Gentle_breeze Awaken Orbit Sunshower \

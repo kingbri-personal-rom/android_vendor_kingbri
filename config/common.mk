@@ -30,3 +30,7 @@ PRODUCT_PACKAGES += \
     FontArbutusSourceOverlay \
     FontLatoZillaOverlay \
     FontRubikRubikOverlay
+
+# For bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/kingbri/prebuilt/common/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip

@@ -37,4 +37,6 @@ PRODUCT_PACKAGES += \
     
 # Extra Packages
 PRODUCT_PACKAGES += \
+    WallpaperPicker2 \
+    ThemePicker \
     PixelThemes

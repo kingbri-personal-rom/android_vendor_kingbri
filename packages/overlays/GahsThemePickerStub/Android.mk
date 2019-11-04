@@ -12,17 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/gahs/config/fonts.mk
-include vendor/gahs/config/google_audio.mk
-include frameworks/base/data/sounds/AudioPackage14.mk
+LOCAL_PATH := $(call my-dir)
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-include vendor/gahs/config/perf.mk
-endif
-
-DEVICE_PACKAGE_OVERLAYS += \
-    vendor/gahs/overlay/common
-
-PRODUCT_PACKAGES += \
-    ThemePicker \
-    GahsThemePickerStub
+include $(CLEAR_VARS)
+LOCAL_PACKAGE_NAME := GahsThemePickerStub
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
+LOCAL_PRODUCT_MODULE := true
+LOCAL_SDK_VERSION := current
+include $(BUILD_PACKAGE)

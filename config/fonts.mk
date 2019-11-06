@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product, external/google-fonts/zilla-slab/fonts.mk)
+$(call inherit-product, external/google-fonts/lato/fonts.mk)
+$(call inherit-product, external/google-fonts/rubik/fonts.mk)
+$(call inherit-product, external/google-fonts/arbutus-slab/fonts.mk)
+
 # Google Sans
 PRODUCT_COPY_FILES += \
     vendor/gahs/prebuilt/common/fonts/GoogleSans-Bold.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/GoogleSans-Bold.ttf \

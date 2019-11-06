@@ -1,4 +1,5 @@
-# Copyright 2019 GahsROM
+#
+#  Copyright 2019 GahsROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,21 +12,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-include vendor/gahs/config/fonts.mk
-include vendor/gahs/config/google_audio.mk
-include frameworks/base/data/sounds/AudioPackage14.mk
+LOCAL_PATH:= $(call my-dir)
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-include vendor/gahs/config/perf.mk
-endif
-
-DEVICE_PACKAGE_OVERLAYS += \
-    vendor/gahs/overlay/common
-
-PRODUCT_PACKAGES += \
-    ThemePicker \
-    GahsThemePickerStub \
-    FontArbutusSourceOverlay \
-    FontLatoZillaOverlay \
-    FontRubikRubikOverlay
+include $(CLEAR_VARS)
+LOCAL_PACKAGE_NAME := FontLatoZillaOverlay
+LOCAL_RRO_THEME := FontLatoZillaOverlay
+LOCAL_SRC_FILES := $(call all-subdir-java-files)
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
+LOCAL_PRODUCT_MODULE := true
+LOCAL_SDK_VERSION := current
+include $(BUILD_RRO_PACKAGE)

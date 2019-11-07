@@ -40,3 +40,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker2 \
     ThemePicker \
     PixelThemes
+
+# Copy APN files.
+PRODUCT_COPY_FILES += \
+    vendor/kingbri/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml

@@ -15,6 +15,7 @@
 include vendor/kingbri/config/fonts.mk
 include vendor/kingbri/config/google_audio.mk
 include frameworks/base/data/sounds/AudioPackage14.mk
+include vendor/gahs/config/gapps.mk
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 include vendor/kingbri/config/perf.mk

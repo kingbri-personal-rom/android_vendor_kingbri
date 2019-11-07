@@ -12,21 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/gahs/config/fonts.mk
-include vendor/gahs/config/google_audio.mk
-include frameworks/base/data/sounds/AudioPackage14.mk
-include vendor/gahs/config/gapps.mk
+include vendor/gahs/config/utils.mk
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-include vendor/gahs/config/perf.mk
+LOCAL_TARGET_ARCH := $(call get_dump_var,TARGET_ARCH)
+
+# Include GApps by default on arm64 builds
+ifeq ($(LOCAL_TARGET_ARCH),arm64)
+TARGET_INCLUDE_GAPPS ?= true
+else
+TARGET_INCLUDE_GAPPS ?= false
 endif
 
-DEVICE_PACKAGE_OVERLAYS += \
-    vendor/gahs/overlay/common
-
-PRODUCT_PACKAGES += \
-    ThemePicker \
-    GahsThemePickerStub \
-    FontArbutusSourceOverlay \
-    FontLatoZillaOverlay \
-    FontRubikRubikOverlay
+ifeq ($(TARGET_INCLUDE_GAPPS),true)
+ifneq ($(LOCAL_TARGET_ARCH),arm64)
+$(warning * TARGET_INCLUDE_GAPPS set to true, but TARGET_ARCH is not arm64.)
+$(warning * GApps do not support non-arm64 builds! GApps will be excluded.)
+else
+$(call inherit-product, vendor/gapps/gapps.mk)
+endif # LOCAL_TARGET_ARCH
+endif # TARGET_INCLUDE_GAPPS

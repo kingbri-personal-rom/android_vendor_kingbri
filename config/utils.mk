@@ -17,5 +17,5 @@
 #   Usage: $(call get_dump_var,TARGET_ARCH)
 #   Return: arm64
 define get_dump_var
-$(shell sed -n "s/^.*: $(strip $(1)) //p" out/soong.log)
+$(shell sed -n "s/^.*: $(strip $(1)) //p" out/soong.1.log 2>/dev/null | head -n 1)
 endef

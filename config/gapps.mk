@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/gahs/config/utils.mk
+include vendor/kingbri/config/utils.mk
 
 LOCAL_TARGET_ARCH := $(call get_dump_var,TARGET_ARCH)
 

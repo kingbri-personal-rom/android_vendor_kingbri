@@ -43,6 +43,6 @@ PRODUCT_COPY_FILES += $(foreach f,$(UI_FILES),\
 	$(PREBUILT_AUDIO_PATH)/ui/$(f).ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/$(f).ogg)
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=Shooting_star.ogg \
-    ro.config.notification_sound=Mallet.ogg \
-    ro.config.alarm_alert=Spokes.ogg
+    ro.config.ringtone=The_big_adventure.ogg \
+    ro.config.notification_sound=Iapetus.ogg \
+    ro.config.alarm_alert=Argon.ogg

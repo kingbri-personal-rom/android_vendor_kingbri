@@ -1,5 +1,6 @@
 # Copyright (C) 2017 Unlegacy-Android
 # Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2019 Kingbri ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +17,7 @@
 # -----------------------------------------------------------------
 # Lineage OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/$(KINGBRI_VERSION).zip
+KINGBRI_TARGET_PACKAGE := $(PRODUCT_OUT)/$(KINGBRI_VERSION).zip
 
 .PHONY: kingbri
 kingbri: $(INTERNAL_OTA_PACKAGE_TARGET)

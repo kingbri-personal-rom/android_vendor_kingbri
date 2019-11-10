@@ -17,5 +17,5 @@ BUILD_DATE := $(shell date -u +%Y%m%d)
 BUILD_TIME := $(shell date -u +%H%M)
 BUILD_TIMESTAMP := $(shell date -u +%s)
 
-# Pixel Dust ROM package name 
-KINGBRI_VERSION := $(ROM_VERSION)-$(BUILD_VERSION)-$(TARGET_DEVICE)-$(shell date +%Y%m%d-%H%M)
+# Kingbri ROM version name 
+KINGBRI_VERSION := $(ROM_VERSION)-$(TARGET_DEVICE)-$(shell date +%Y%m%d-%H%M)
